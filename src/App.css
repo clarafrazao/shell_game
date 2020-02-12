@@ -1,0 +1,84 @@
+.App {
+  margin: 0 auto;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+button {
+  text-align: center;
+  display: block;
+  margin: 40px auto;
+  border-radius: 20px;
+  cursor: pointer;
+}
+button p {
+  margin: 0;
+  padding: 5px 10px;
+}
+button:hover {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.surface {
+  position: relative;
+  margin: 20px auto;
+  width: 100%;
+
+  outline: 5px solid #333;
+}
+.invisible {
+  opacity: 0 !important;
+}
+.cup {
+  background-color: darkmagenta;
+  position: absolute;
+  display: flex;
+  top: 70px;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 450ms;
+}
+#ball {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 100px;
+  border-radius: 50%;
+  background: #000000;
+  opacity: 0;
+  animation-name: handleBall;
+  animation-duration: 2s;
+}
+.hasBall {
+  animation-name: handleCup;
+  animation-duration: 2s;
+}
+@keyframes handleBall {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes handleCup {
+  10% {
+    top: 70px;
+  }
+  50% {
+    top: -10px;
+  }
+  100% {
+    top: 70px;
+  }
+}
